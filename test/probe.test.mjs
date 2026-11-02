@@ -33,13 +33,14 @@ test('time is measured to the last byte of the body, not to the headers', async 
   assert.equal(r.outcome, 'usable');
 });
 test('a response that never completes is a timeout at the limit', async () => {
-  const hang = (url, init) => new Promise((_, reject) => init.signal.addEventListener('abort', () => reject(Object.assign(new Error('aborted'), { name: 'TimeoutError' }))));
+  // AbortSignal.timeout's own timer does not keep a process alive (a real socket does), so the fake holds the loop open as a real hung request would.
+  const hang = (url, init) => new Promise((_, reject) => { const hold = setTimeout(() => {}, 5000); init.signal.addEventListener('abort', () => { clearTimeout(hold); reject(Object.assign(new Error('aborted'), { name: 'TimeoutError' })); }); });
   const r = await probeModel({ model: MODEL, apiKey: 'k', fetchImpl: hang, timeoutMs: 40 });
   assert.equal(r.outcome, 'timeout');
   assert.ok(r.ms >= 35);
 });
 test('a body that stalls after the headers also times out', async () => {
-  const stall = (url, init) => Promise.resolve({ status: 200, headers: new Headers(), text: () => new Promise((_, reject) => init.signal.addEventListener('abort', () => reject(Object.assign(new Error('aborted'), { name: 'TimeoutError' })))) });
+  const stall = (url, init) => Promise.resolve({ status: 200, headers: new Headers(), text: () => new Promise((_, reject) => { const hold = setTimeout(() => {}, 5000); init.signal.addEventListener('abort', () => { clearTimeout(hold); reject(Object.assign(new Error('aborted'), { name: 'TimeoutError' })); }); }) });
   const r = await probeModel({ model: MODEL, apiKey: 'k', fetchImpl: stall, timeoutMs: 40 });
   assert.equal(r.outcome, 'timeout');
 });
