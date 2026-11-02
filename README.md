@@ -44,6 +44,16 @@ Records go to `data/probes/YYYY-MM-DD.jsonl`, one line per probe; the rollup wri
 
 The key is read from `FMI_OPENROUTER_API_KEY` on purpose, never `OPENROUTER_API_KEY`. OpenRouter's free-model limits are per account (20 requests a minute; 50 a day with under 10 credits purchased, 1,000 a day with 10 or more), and extra keys on one account do not raise them. The index needs **its own account and key**, or its probes would use up the allowance of every other tool, and those tools' traffic would distort the index.
 
+### Where the key goes
+
+1. Make a **new** OpenRouter account just for this (a different email from your other tools), and create a key at https://openrouter.ai/keys. Do not buy credits: the free allowance (50 requests a day) covers the 12 models three times a day.
+2. **On your computer:** copy `.env.example` to `.env`, paste the key after `FMI_OPENROUTER_API_KEY=`, and run with Node's built-in env-file option:
+   ```bash
+   node --env-file=.env src/run.mjs --from-catalog --max 15
+   ```
+   `.env` is in `.gitignore`, so it is never committed. (Or `export FMI_OPENROUTER_API_KEY=...` in your shell for one session.)
+3. **On GitHub (when the scheduler is added):** repository Settings, Secrets and variables, Actions, New repository secret, named `FMI_OPENROUTER_API_KEY`. Never put the key in a file in the repo, an issue or a workflow.
+
 ### Safety guards
 
 - A model is probed only if its id ends in `:free` **and** the live catalogue prices it at zero for both prompt and completion. Anything else is refused before a request is sent, so a probe can never spend money.
