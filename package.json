@@ -1,0 +1,17 @@
+{
+  "name": "free-model-index",
+  "version": "0.1.0",
+  "description": "A public, open, scheduled measurement of how reliably OpenRouter's free models answer a real request.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "probe": "node src/run.mjs",
+    "rollup": "node src/rollup.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@extrafemi-ai/lodestone": "^0.7.0"
+  }
+}
