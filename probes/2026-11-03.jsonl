@@ -1,0 +1,12 @@
+{"ts":"2026-11-03T09:40:48.481Z","v":"1.0","prompt":"32a374b7c194","model":"dots-studio/dots-3-note-preview:free","outcome":"unusable","status":200,"ms":3695,"answeredChars":0,"invalid":"empty","provider":"AtlasCloud"}
+{"ts":"2026-11-03T09:40:55.680Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-26b-a4b-it:free","outcome":"rate_limited_upstream","status":429,"ms":130}
+{"ts":"2026-11-03T09:40:59.313Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-31b-it:free","outcome":"rate_limited_upstream","status":429,"ms":107}
+{"ts":"2026-11-03T09:41:02.924Z","v":"1.0","prompt":"32a374b7c194","model":"liquid/lfm-2.5-2.6b:free","outcome":"usable","status":200,"ms":373,"answeredChars":55,"provider":"Liquid"}
+{"ts":"2026-11-03T09:41:06.801Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free","outcome":"usable","status":200,"ms":11684,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-03T09:41:21.986Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-ultra-550b-a55b:free","outcome":"usable","status":200,"ms":12427,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-03T09:41:37.917Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-lightning:free","outcome":"unusable","status":200,"ms":2691,"answeredChars":0,"invalid":"empty","provider":"Nvidia"}
+{"ts":"2026-11-03T09:41:44.111Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":1754,"answeredChars":49,"provider":"Nvidia"}
+{"ts":"2026-11-03T09:41:49.367Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"unavailable","status":503,"ms":351}
+{"ts":"2026-11-03T09:41:53.219Z","v":"1.0","prompt":"32a374b7c194","model":"thinkingmachines/inkling-small:free","outcome":"restricted","status":403,"ms":383,"message":"thinkingmachines/inkling-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"}
+{"ts":"2026-11-03T09:41:57.107Z","v":"1.0","prompt":"32a374b7c194","model":"thinkingmachines/inkling:free","outcome":"restricted","status":403,"ms":36,"message":"thinkingmachines/inkling:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"}
+{"ts":"2026-11-03T09:42:00.646Z","v":"1.0","prompt":"32a374b7c194","model":"xingchen-agi/xing4.0-29b-a4b:free","outcome":"rate_limited_upstream","status":429,"ms":251}

@@ -1,0 +1,258 @@
+{
+  "date": "2026-11-03",
+  "methodVersion": "1.0",
+  "models": [
+    {
+      "model": "dots-studio/dots-3-note-preview:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 1,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": 3695,
+      "latencyP95Ms": 3695
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 1,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": null,
+      "latencyP95Ms": null
+    },
+    {
+      "model": "google/gemma-4-31b-it:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 1,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": null,
+      "latencyP95Ms": null
+    },
+    {
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 1,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 100,
+      "latencyP50Ms": 373,
+      "latencyP95Ms": 373
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 1,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 100,
+      "latencyP50Ms": 11684,
+      "latencyP95Ms": 11684
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 1,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 100,
+      "latencyP50Ms": 12427,
+      "latencyP95Ms": 12427
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 1,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": 2691,
+      "latencyP95Ms": 2691
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 1,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 100,
+      "latencyP50Ms": 1754,
+      "latencyP95Ms": 1754
+    },
+    {
+      "model": "recursive/flint-v1.0:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 1,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": null,
+      "latencyP95Ms": null
+    },
+    {
+      "model": "thinkingmachines/inkling-small:free",
+      "probes": 1,
+      "n": 0,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 1,
+        "probe_budget": 0
+      },
+      "usableRate": null,
+      "latencyP50Ms": null,
+      "latencyP95Ms": null
+    },
+    {
+      "model": "thinkingmachines/inkling:free",
+      "probes": 1,
+      "n": 0,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 1,
+        "probe_budget": 0
+      },
+      "usableRate": null,
+      "latencyP50Ms": null,
+      "latencyP95Ms": null
+    },
+    {
+      "model": "xingchen-agi/xing4.0-29b-a4b:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 1,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": null,
+      "latencyP95Ms": null
+    }
+  ]
+}
