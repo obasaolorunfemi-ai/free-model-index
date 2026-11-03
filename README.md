@@ -63,6 +63,28 @@ The key is read from `FMI_OPENROUTER_API_KEY` on purpose, never `OPENROUTER_API_
 - A daily allowance (default 45) is counted from the day's file, so it holds across runs. The run paces itself at 3.5 s a request, and stops when our own account hits its limit or the key is refused.
 - The default list leaves out free models that are not general chat models (safety classifiers, embedders, speech, OCR and code-only models: the same exclusions Lodestone applies), and the dry run names them.
 
+## Scheduler
+
+Two GitHub Actions workflows run the index, and both are **off until you switch them on**.
+
+| Workflow | When (UTC) | What it does |
+|---|---|---|
+| `Probe` | 00:07, 08:07, 16:07 | Probes the free chat models and commits the records to the `data` branch. About 36 probes a day for 12 models. |
+| `Watch the catalogue` | every hour at :23 | Reads OpenRouter's public catalogue (no completion, so it does not use the free-request allowance), records which free models appeared or went in `models.json` and `events.jsonl`, and probes any new free chat model at once. The first run is a baseline and probes nothing. |
+
+**Switch it on**, in the repository on GitHub, Settings, Secrets and variables, Actions:
+1. **Secrets** tab, New repository secret: name `FMI_OPENROUTER_API_KEY`, value the index's own key. This is the only secret.
+2. **Variables** tab, New repository variable: name `FMI_SCHEDULE_ENABLED`, value `true`. Until this exists the scheduled runs do nothing (they show as skipped).
+3. Optional variables: `FMI_DAILY_LIMIT` (default 45 probes a day, counted across runs) and `FMI_MAX_MODELS` (default 15).
+
+**Try it by hand first:** Actions tab, `Probe`, Run workflow. A manual run works as soon as the secret exists; it does not need the variable.
+
+**Switch it off:** delete the `FMI_SCHEDULE_ENABLED` variable (or set it to anything but `true`).
+
+**Where the data goes.** Records are committed to a separate `data` branch (created empty the first time), so the code history is not buried in one commit per run: `probes/YYYY-MM-DD.jsonl`, `daily/YYYY-MM-DD.json`, `models.json`, `events.jsonl`. Only the workflows can write to it: the job has `contents: write` and nothing else, the key is given only to the step that sends probes, and nothing runs on a pull request. GitHub documents that it disables scheduled workflows in a public repository with no activity for 60 days; the data commits count as activity.
+
+GitHub's scheduler is best effort and can start a run late, so every record carries the time the probe actually started.
+
 ## Licences
 
 - **Code:** [Apache-2.0](LICENSE).

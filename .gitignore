@@ -2,3 +2,8 @@ node_modules/
 .env
 .env.*
 *.log
+# local probe output; the real data lives on the `data` branch
+data/probes/*.jsonl
+data/daily/*.json
+data/models.json
+data/events.jsonl

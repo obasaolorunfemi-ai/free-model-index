@@ -1,0 +1,45 @@
+name: Probe
+# Probes the free models three times a day and commits the records to the `data` branch.
+#
+# OFF until you switch it on: the scheduled run only happens when the repository variable FMI_SCHEDULE_ENABLED is "true".
+# A manual run (Actions, Probe, Run workflow) always works. It needs the repository secret FMI_OPENROUTER_API_KEY. See README, "Scheduler".
+on:
+  schedule:
+    - cron: '7 0,8,16 * * *'   # 00:07, 08:07 and 16:07 UTC: three probes a day per model, off the top of the hour when GitHub is busiest
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One writer to the data branch at a time, and never cancel a run half way through writing.
+concurrency:
+  group: fmi-data
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    if: github.event_name == 'workflow_dispatch' || vars.FMI_SCHEDULE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write   # to push the records to the data branch, and nothing else
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check out the data branch
+        run: scripts/data-checkout.sh data-repo
+      - name: Probe the free models
+        env:
+          FMI_OPENROUTER_API_KEY: ${{ secrets.FMI_OPENROUTER_API_KEY }}
+        run: node src/run.mjs --from-catalog --max "${{ vars.FMI_MAX_MODELS || '15' }}" --daily-limit "${{ vars.FMI_DAILY_LIMIT || '45' }}" --out data-repo/probes
+      # Whatever was recorded is kept even if the probe step stopped early (a refused key, our own limit).
+      - name: Roll up the day
+        if: always()
+        run: node src/rollup.mjs --in data-repo/probes --out data-repo/daily
+      - name: Commit the data
+        if: always()
+        run: scripts/data-commit.sh data-repo probes

@@ -1,0 +1,48 @@
+name: Watch the catalogue
+# Every hour, reads OpenRouter's public model catalogue (no completion, so it does not use the free-request allowance), records which free
+# models appeared or went, and probes any new free chat model straight away, so a model is measured the day it appears.
+#
+# OFF until FMI_SCHEDULE_ENABLED is "true", like the Probe workflow. A manual run always works; probing a new model needs FMI_OPENROUTER_API_KEY.
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fmi-data
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    if: github.event_name == 'workflow_dispatch' || vars.FMI_SCHEDULE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check out the data branch
+        run: scripts/data-checkout.sh data-repo
+      - name: Update the list of free models
+        id: watch
+        run: node src/catalogue.mjs --data data-repo
+      - name: Probe any new free model
+        if: steps.watch.outputs.added != ''
+        env:
+          FMI_OPENROUTER_API_KEY: ${{ secrets.FMI_OPENROUTER_API_KEY }}
+          ADDED: ${{ steps.watch.outputs.added }}
+        run: node src/run.mjs --models "$ADDED" --daily-limit "${{ vars.FMI_DAILY_LIMIT || '45' }}" --out data-repo/probes
+      - name: Roll up the day
+        if: always() && steps.watch.outputs.added != ''
+        run: node src/rollup.mjs --in data-repo/probes --out data-repo/daily
+      - name: Commit the data
+        if: always()
+        run: scripts/data-commit.sh data-repo "catalogue"

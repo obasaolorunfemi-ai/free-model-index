@@ -46,6 +46,10 @@ OpenRouter's daily and per-minute limits apply to the whole account, so a 429 of
 
 One line per probe: time started, method version, prompt hash, model, outcome, HTTP status, milliseconds, the length of the answer, the reason an answer was invalid, the provider named in the response, and the account's remaining allowance when OpenRouter reports it. **No model output is stored**, and the key is never written anywhere.
 
+## Schedule
+
+Probes run three times a day, at 00:07, 08:07 and 16:07 UTC, on GitHub's runners. A catalogue check runs every hour; a new free chat model is probed in that run, so it is measured the day it appears. The first catalogue check only records the models already listed. Free models that disappear are marked gone and kept in the history. GitHub's scheduler is best effort and may start a run late: the time in each record is when the probe was actually sent.
+
 ## Limits you should know about
 
 - One prompt, one task. It says how a model does on this small structured call, not on anything else.
