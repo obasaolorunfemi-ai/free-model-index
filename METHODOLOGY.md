@@ -37,6 +37,7 @@ Time is measured from the moment the request is sent to the last byte of the res
 | `withdrawn` | 404: the model is no longer offered |
 | `unavailable` | a 5xx |
 | `other` | anything else, with the status |
+| `restricted` | 403: the model refuses direct API calls (for example it is offered only through approved apps). Recorded with OpenRouter's message, never counted: it says nothing about reliability |
 | `probe_budget` | **our own account's** daily or per-minute limit. Recorded, never counted for or against the model |
 
 OpenRouter's daily and per-minute limits apply to the whole account, so a 429 of that kind says nothing about a model. Only a limit from the model's own provider is the model's.

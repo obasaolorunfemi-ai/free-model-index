@@ -21,7 +21,7 @@ export function rollupDay(date, records) {
   const models = [...byModel.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([model, rs]) => {
     const counts = Object.fromEntries(OUTCOMES.map((o) => [o, 0]));
     for (const r of rs) counts[r.outcome] = (counts[r.outcome] ?? 0) + 1;
-    const counted = rs.filter((r) => COUNTED(r.outcome));
+    const counted = rs.filter((r) => COUNTED(r.outcome));  // a restricted model (403) is listed, not rated
     const times = counted.filter((r) => ANSWERED.has(r.outcome)).map((r) => r.ms).sort((a, b) => a - b);
     return {
       model,

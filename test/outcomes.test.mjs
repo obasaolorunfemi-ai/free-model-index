@@ -33,12 +33,11 @@ test('a 200 with an error object takes the error code', () => {
   assert.equal(classify({ status: 200, text: JSON.stringify({ error: { code: 502, message: 'bad gateway' } }), ms: 5 }).outcome, 'unavailable');
   assert.equal(classify({ status: 200, text: JSON.stringify({ error: { code: 404, message: 'gone' } }), ms: 5 }).outcome, 'withdrawn');
 });
-test('status codes: 404 withdrawn, 5xx unavailable, 402 other, 401 and 403 are an auth problem, not a model outcome', () => {
+test('status codes: 404 withdrawn, 5xx unavailable, 402 other, 401 is an auth problem, not a model outcome', () => {
   assert.equal(classify({ status: 404, text: '' }).outcome, 'withdrawn');
   assert.equal(classify({ status: 503, text: '' }).outcome, 'unavailable');
   assert.equal(classify({ status: 402, text: '' }).outcome, 'other');
   assert.equal(classify({ status: 401, text: '' }).outcome, 'auth');
-  assert.equal(classify({ status: 403, text: '' }).outcome, 'auth');
 });
 test('429: the account-wide daily and per-minute limits are ours (probe_budget); an upstream 429 is the model\'s', () => {
   const body = (message, extra = {}) => JSON.stringify({ error: { message, ...extra } });
@@ -46,4 +45,11 @@ test('429: the account-wide daily and per-minute limits are ours (probe_budget);
   assert.equal(classify({ status: 429, text: body('Rate limit exceeded: requests per minute') }).outcome, 'probe_budget');
   assert.equal(classify({ status: 429, text: body('Provider returned error', { metadata: { provider_name: 'Venice', raw: 'temporarily rate-limited upstream' } }) }).outcome, 'rate_limited_upstream');
   assert.equal(classify({ status: 429, text: 'slow down' }).outcome, 'rate_limited_other');
+});
+
+test('a 403 is the model\'s own refusal (restricted), with the message; only a 401 means the key is refused', () => {
+  const c = classify({ status: 403, text: JSON.stringify({ error: { code: 403, message: 'x is only available on agentic harnesses' } }) });
+  assert.equal(c.outcome, 'restricted');
+  assert.match(c.message, /agentic harnesses/);
+  assert.equal(classify({ status: 401, text: '' }).outcome, 'auth');
 });

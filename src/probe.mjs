@@ -23,7 +23,7 @@ export async function probeModel({ model, apiKey, fetchImpl = fetch, now = Date.
     const ms = Math.round(clock() - t0);
     const remaining = Number(res.headers?.get?.('x-ratelimit-remaining'));
     const c = classify({ status: res.status, text, ms });
-    return { ...base, outcome: c.outcome, status: c.status, ms, ...(c.answeredChars !== undefined ? { answeredChars: c.answeredChars } : {}), ...(c.invalid ? { invalid: c.invalid } : {}), ...(c.provider ? { provider: c.provider } : {}), ...(Number.isFinite(remaining) && res.headers.get('x-ratelimit-remaining') !== null ? { accountRemaining: remaining } : {}) };
+    return { ...base, outcome: c.outcome, status: c.status, ms, ...(c.message ? { message: c.message } : {}), ...(c.answeredChars !== undefined ? { answeredChars: c.answeredChars } : {}), ...(c.invalid ? { invalid: c.invalid } : {}), ...(c.provider ? { provider: c.provider } : {}), ...(Number.isFinite(remaining) && res.headers.get('x-ratelimit-remaining') !== null ? { accountRemaining: remaining } : {}) };
   } catch (e) {
     const ms = Math.round(clock() - t0);
     if (e?.name === 'TimeoutError' || e?.name === 'AbortError') return { ...base, outcome: 'timeout', ms };

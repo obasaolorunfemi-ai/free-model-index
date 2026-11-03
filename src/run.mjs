@@ -3,12 +3,14 @@
 //   FMI_OPENROUTER_API_KEY=... node src/run.mjs --from-catalog --max 15
 //   FMI_OPENROUTER_API_KEY=... node src/run.mjs --models google/gemma-4-31b-it:free,nvidia/nemotron-3-ultra-550b-a55b:free
 //   node src/run.mjs --from-catalog --dry-run          (shows the plan; sends nothing; needs no key)
+//   node --env-file=.env src/run.mjs --check-key       (asks OpenRouter about the key itself; sends no completion)
 // The key is read from FMI_OPENROUTER_API_KEY on purpose, never OPENROUTER_API_KEY: this index must have its own key and its own
 // account, or its probes would use up the free-request allowance of every other tool.
 import { appendFileSync, existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { excludedFreeModels, fetchCatalog, freeModels, isFreeModel } from './catalog.mjs';
+import { checkKey } from './key.mjs';
 import { probeModel } from './probe.mjs';
 
 const day = (iso) => iso.slice(0, 10);
@@ -35,17 +37,23 @@ export async function runProbes({ models, catalog, apiKey, outDir, dailyLimit = 
   let room = Math.max(0, dailyLimit - used);
   const records = [];
   let stopped = null;
+  let restrictedInARow = 0;
   if (room === 0) stopped = `daily allowance of ${dailyLimit} probes already used`;
   for (let i = 0; i < models.length && !stopped; i++) {
     if (room === 0) { stopped = `daily allowance of ${dailyLimit} probes used`; break; }
     if (records.length > 0) await sleep(paceMs);     // OpenRouter allows 20 requests a minute: stay well under it
     const r = await probeModel({ model: models[i], apiKey, fetchImpl, now, ...(clock ? { clock } : {}) });
-    if (r.outcome === 'auth') { stopped = 'the key was refused'; throw new Error('OpenRouter refused the key (401 or 403): nothing was recorded for this model'); }
+    if (r.outcome === 'auth') {
+      stopped = 'the key was refused';
+      throw new Error(`OpenRouter answered ${r.status} for ${r.model}${r.message ? `: "${r.message}"` : ''}. Nothing was recorded for it. Run "node --env-file=.env src/run.mjs --check-key" to test the key itself.`);
+    }
     appendFileSync(join(outDir, `${day(r.ts)}.jsonl`), JSON.stringify(r) + '\n');
     records.push(r);
     room--;
     log(`${r.outcome.padEnd(22)} ${String(r.ms).padStart(6)} ms  ${r.model}`);
     if (r.outcome === 'probe_budget') stopped = 'our own account hit its limit';
+    restrictedInARow = r.outcome === 'restricted' ? restrictedInARow + 1 : 0;
+    if (restrictedInARow >= 3) stopped = 'three models in a row answered 403; that looks like the key, not the models. Run --check-key';
   }
   return { sentBefore: used, probed: records.length, notProbed: models.length - records.length, stopped, records };
 }
@@ -61,6 +69,7 @@ function parseArgs(argv) {
     else if (k === '--daily-limit') a.dailyLimit = Number(argv[++i]);
     else if (k === '--pace-ms') a.paceMs = Number(argv[++i]);
     else if (k === '--dry-run') a.dryRun = true;
+    else if (k === '--check-key') a.checkKey = true;
     else throw new Error(`unknown option ${k}`);
   }
   return a;
@@ -68,6 +77,13 @@ function parseArgs(argv) {
 
 async function main() {
   const a = parseArgs(process.argv.slice(2));
+  if (a.checkKey) {
+    const apiKey = process.env.FMI_OPENROUTER_API_KEY;
+    if (!apiKey) { console.error('FMI_OPENROUTER_API_KEY is not set. With the key in .env, run: node --env-file=.env src/run.mjs --check-key'); process.exit(2); }
+    const r = await checkKey({ apiKey });
+    console.log(r.summary);
+    process.exit(r.ok ? 0 : 1);
+  }
   if (!a.models && !a.fromCatalog) { console.error('Pass --from-catalog or --models id1,id2. Add --dry-run to see the plan without sending anything.'); process.exit(2); }
   const catalog = await fetchCatalog();
   const models = a.models ?? freeModels(catalog).map((m) => m.id).slice(0, a.max);

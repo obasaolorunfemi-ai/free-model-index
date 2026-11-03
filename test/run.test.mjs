@@ -50,7 +50,7 @@ test('when our own account hits its limit, the probe is recorded and the run sto
 test('a refused key stops the run and records nothing for the model', async () => {
   const out = dir();
   const f = fakeFetch(() => respond(401, '{"error":{"message":"No auth"}}'));
-  await assert.rejects(runProbes(base({ models: ['a/one:free', 'b/two:free'], outDir: out, fetchImpl: f })), /refused the key/);
+  await assert.rejects(runProbes(base({ models: ['a/one:free', 'b/two:free'], outDir: out, fetchImpl: f })), /answered 401 for a\/one:free.*Nothing was recorded/s);
   assert.deepEqual(readdirSync(out), []);
   assert.equal(f.calls.length, 1);
 });
@@ -65,4 +65,23 @@ test('a model that fails is recorded as that model\'s outcome and the run carrie
   const f = fakeFetch((n) => (n === 1 ? respond(404, '{"error":{"message":"No endpoints found"}}') : respond(200, completion(GOOD))));
   const r = await runProbes(base({ models: ['a/one:free', 'b/two:free'], outDir: out, fetchImpl: f }));
   assert.deepEqual(r.records.map((x) => x.outcome), ['withdrawn', 'usable']);
+});
+
+test('a refused key says which status OpenRouter answered and what it said, and points at --check-key', async () => {
+  const f = fakeFetch(() => respond(401, JSON.stringify({ error: { code: 401, message: 'No auth credentials found' } })));
+  await assert.rejects(runProbes(base({ models: ['a/one:free'], outDir: dir(), fetchImpl: f })), /answered 401 for a\/one:free: "No auth credentials found".*--check-key/s);
+});
+
+test('a model that answers 403 is recorded as restricted and the run carries on', async () => {
+  const out = dir();
+  const f = fakeFetch((n) => (n === 1 ? respond(403, JSON.stringify({ error: { message: 'only available on agentic harnesses' } })) : respond(200, completion(GOOD))));
+  const r = await runProbes(base({ models: ['a/one:free', 'b/two:free'], outDir: out, fetchImpl: f }));
+  assert.deepEqual(r.records.map((x) => x.outcome), ['restricted', 'usable']);
+  assert.match(r.records[0].message, /agentic harnesses/);
+});
+test('three 403s in a row look like a key problem, so the run stops', async () => {
+  const f = fakeFetch(() => respond(403, '{"error":{"message":"Forbidden"}}'));
+  const r = await runProbes(base({ models: ['a/one:free', 'b/two:free', 'c/three:free'], outDir: dir(), fetchImpl: f }));
+  assert.equal(r.probed, 3);
+  assert.match(r.stopped, /three models in a row/);
 });

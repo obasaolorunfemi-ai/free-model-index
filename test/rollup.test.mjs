@@ -37,3 +37,11 @@ test('models come out in a stable order, with the method version', () => {
   assert.deepEqual(d.models.map((m) => m.model), ['a:free', 'z:free']);
   assert.equal(d.methodVersion, '1.0');
 });
+
+test('a restricted model (403) is listed but not rated', () => {
+  const m = rollupDay('2026-11-02', [rec('i:free', 'restricted'), rec('i:free', 'restricted')]).models[0];
+  assert.equal(m.probes, 2);
+  assert.equal(m.n, 0);
+  assert.equal(m.usableRate, null);
+  assert.equal(m.outcomes.restricted, 2);
+});

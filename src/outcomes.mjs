@@ -12,22 +12,34 @@ export const OUTCOMES = [
   'withdrawn',              // 404
   'unavailable',            // 5xx
   'other',                  // anything else, with the status
+  'restricted',             // 403: the model refuses direct API use (for example, only through approved apps). Not counted: it says nothing about reliability
   'probe_budget',           // OUR account's limit: never counted for or against the model
 ];
 
 /** The outcomes that mean the model answered at all, for the latency figures. */
 export const ANSWERED = new Set(['usable', 'usable_late', 'unusable']);
 
-/** The outcomes counted when working out a rate. A probe that hit our own limit says nothing about the model. */
-export const COUNTED = (outcome) => outcome !== 'probe_budget';
+/** The outcomes counted when working out a rate. A probe that hit our own limit, or that the model refused as a direct API call, says nothing about how reliably it answers. */
+export const COUNTED = (outcome) => outcome !== 'probe_budget' && outcome !== 'restricted';
+
+/** The human-readable message inside an OpenRouter error body, shortened. It never contains a key: OpenRouter does not echo one. */
+export function errorMessage(text) {
+  try {
+    const j = JSON.parse(text);
+    const m = typeof j?.error === 'string' ? j.error : j?.error?.message ?? j?.message;
+    return typeof m === 'string' && m.trim() ? m.trim().slice(0, 200) : undefined;
+  } catch { return undefined; }
+}
 
 /**
- * Turns an HTTP result into an outcome. `auth` is not a model's outcome: it means our key was refused, so the run stops.
+ * Turns an HTTP result into an outcome. `auth` (401) is not a model's outcome: it means our key was refused, so the run stops.
+ * A 403 is the model's own refusal, so it is the model's outcome (`restricted`): OpenRouter answers it per model, for example for a model offered only through approved apps.
  * OpenRouter's 'daily' and 'minute' rate limits are limits on the whole account, so they are `probe_budget`; only a limit from the
  * model's own provider counts against the model.
  */
 export function classify({ status, text, ms }) {
-  if (status === 401 || status === 403) return { outcome: 'auth', status };
+  if (status === 401) return { outcome: 'auth', status, message: errorMessage(text) };
+  if (status === 403) return { outcome: 'restricted', status, message: errorMessage(text) };
   if (status === 200) {
     let data;
     try { data = JSON.parse(text); } catch { return { outcome: 'other', status }; }

@@ -17,7 +17,7 @@ It is a build by Extrafemi, made alongside [Lodestone](https://lodestone.extrafe
 
 One request, written down in [`src/spec.mjs`](src/spec.mjs): a short JSON extraction from a one-line job posting, temperature 0, no system prompt, no reasoning option. The answer is *usable* if it is valid JSON with the right content and arrives within 24 s (Lodestone's serverless budget). Nothing a model says is stored: a record keeps the answer's length and whether it was valid.
 
-Outcomes: `usable`, `usable_late`, `unusable`, `timeout`, `rate_limited_upstream`, `rate_limited_other`, `withdrawn`, `unavailable`, `other`, and `probe_budget` (our own account's limit, which is never counted for or against a model). Definitions are in [`src/outcomes.mjs`](src/outcomes.mjs).
+Outcomes: `usable`, `usable_late`, `unusable`, `timeout`, `rate_limited_upstream`, `rate_limited_other`, `withdrawn`, `unavailable`, `other`, `restricted` (a 403: the model refuses direct API calls, for example because it is offered only through approved apps; listed, never rated) and `probe_budget` (our own account's limit, never counted for or against a model). Definitions are in [`src/outcomes.mjs`](src/outcomes.mjs).
 
 ## Run it
 
@@ -33,6 +33,9 @@ node src/run.mjs --from-catalog --dry-run
 # Probe (needs the index's own OpenRouter key; see below)
 FMI_OPENROUTER_API_KEY=... node src/run.mjs --from-catalog --max 15
 FMI_OPENROUTER_API_KEY=... node src/run.mjs --models google/gemma-4-31b-it:free
+
+# Test the key itself, without sending a completion
+node --env-file=.env src/run.mjs --check-key
 
 # Turn the day files into data/daily/YYYY-MM-DD.json
 node src/rollup.mjs
