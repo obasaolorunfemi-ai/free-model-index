@@ -1,0 +1,14 @@
+{"ts":"2026-11-03T17:55:05.362Z","model":"dots-studio/dots-3-note-preview:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"google/gemma-4-26b-a4b-it:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"google/gemma-4-31b-it:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"liquid/lfm-2.5-2.6b:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"nvidia/nemotron-3-ultra-550b-a55b:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"nvidia/nemotron-3.5-lightning:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"nvidia/nemotron-3.5-super-vl:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"recursive/flint-v1.0:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"thinkingmachines/inkling-small:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"thinkingmachines/inkling:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"xingchen-agi/xing4.0-29b-a4b:free","event":"added","kind":"chat","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"cohere/north-mini-code:free","event":"added","kind":"excluded","baseline":true}
+{"ts":"2026-11-03T17:55:05.362Z","model":"nvidia/nemotron-3.5-content-safety:free","event":"added","kind":"excluded","baseline":true}
