@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T06:41:06.631Z",
+  "updated": "2026-11-04T15:32:38.114Z",
   "models": {
     "cohere/north-mini-code:free": {
       "kind": "excluded",
@@ -69,15 +69,17 @@
     },
     "thinkingmachines/inkling-small:free": {
       "kind": "chat",
-      "status": "active",
+      "status": "gone",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-04",
+      "goneAt": "2026-11-04"
     },
     "thinkingmachines/inkling:free": {
       "kind": "chat",
-      "status": "active",
+      "status": "gone",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-04",
+      "goneAt": "2026-11-04"
     },
     "xingchen-agi/xing4.0-29b-a4b:free": {
       "kind": "chat",
