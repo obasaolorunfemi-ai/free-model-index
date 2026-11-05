@@ -1,71 +1,71 @@
 {
-  "updated": "2026-11-04T21:58:11.351Z",
+  "updated": "2026-11-05T02:34:41.438Z",
   "models": {
     "cohere/north-mini-code:free": {
       "kind": "excluded",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "dots-studio/dots-3-note-preview:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "google/gemma-4-26b-a4b-it:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "google/gemma-4-31b-it:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "liquid/lfm-2.5-2.6b:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "nvidia/nemotron-3-ultra-550b-a55b:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "nvidia/nemotron-3.5-content-safety:free": {
       "kind": "excluded",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "nvidia/nemotron-3.5-lightning:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "nvidia/nemotron-3.5-super-vl:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "recursive/flint-v1.0:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     },
     "thinkingmachines/inkling-small:free": {
       "kind": "chat",
@@ -85,7 +85,7 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-04"
+      "lastSeen": "2026-11-05"
     }
   }
 }
