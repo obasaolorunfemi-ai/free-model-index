@@ -14,3 +14,4 @@
 {"ts":"2026-11-03T17:55:05.362Z","model":"nvidia/nemotron-3.5-content-safety:free","event":"added","kind":"excluded","baseline":true}
 {"ts":"2026-11-04T15:32:38.114Z","model":"thinkingmachines/inkling-small:free","event":"removed","kind":"chat"}
 {"ts":"2026-11-04T15:32:38.114Z","model":"thinkingmachines/inkling:free","event":"removed","kind":"chat"}
+{"ts":"2026-11-06T15:59:54.176Z","model":"nvidia/nemotron-3.5-content-safety:free","event":"removed","kind":"excluded"}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T07:59:55.423Z",
+  "updated": "2026-11-06T15:59:54.176Z",
   "models": {
     "cohere/north-mini-code:free": {
       "kind": "excluded",
@@ -45,9 +45,10 @@
     },
     "nvidia/nemotron-3.5-content-safety:free": {
       "kind": "excluded",
-      "status": "active",
+      "status": "gone",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-06"
+      "lastSeen": "2026-11-06",
+      "goneAt": "2026-11-06"
     },
     "nvidia/nemotron-3.5-lightning:free": {
       "kind": "chat",
