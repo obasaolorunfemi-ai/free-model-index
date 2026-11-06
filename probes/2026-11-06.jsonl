@@ -18,3 +18,13 @@
 {"ts":"2026-11-06T15:53:37.940Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":1186,"answeredChars":49,"provider":"Nvidia"}
 {"ts":"2026-11-06T15:53:42.629Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"unusable","status":200,"ms":1891,"answeredChars":0,"invalid":"empty","provider":"Recursive"}
 {"ts":"2026-11-06T15:53:48.024Z","v":"1.0","prompt":"32a374b7c194","model":"xingchen-agi/xing4.0-29b-a4b:free","outcome":"rate_limited_upstream","status":429,"ms":478}
+{"ts":"2026-11-06T21:28:31.656Z","v":"1.0","prompt":"32a374b7c194","model":"dots-studio/dots-3-note-preview:free","outcome":"usable","status":200,"ms":2348,"answeredChars":48,"provider":"AtlasCloud"}
+{"ts":"2026-11-06T21:28:37.506Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-26b-a4b-it:free","outcome":"rate_limited_upstream","status":429,"ms":207}
+{"ts":"2026-11-06T21:28:41.215Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-31b-it:free","outcome":"rate_limited_upstream","status":429,"ms":505}
+{"ts":"2026-11-06T21:28:45.224Z","v":"1.0","prompt":"32a374b7c194","model":"liquid/lfm-2.5-2.6b:free","outcome":"rate_limited_upstream","status":429,"ms":115}
+{"ts":"2026-11-06T21:28:48.841Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free","outcome":"usable","status":200,"ms":602,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-06T21:28:52.948Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-ultra-550b-a55b:free","outcome":"usable","status":200,"ms":4003,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-06T21:29:00.454Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-lightning:free","outcome":"unusable","status":200,"ms":2774,"answeredChars":0,"invalid":"empty","provider":"Nvidia"}
+{"ts":"2026-11-06T21:29:06.731Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":1555,"answeredChars":49,"provider":"Nvidia"}
+{"ts":"2026-11-06T21:29:11.788Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"unusable","status":200,"ms":1325,"answeredChars":0,"invalid":"empty","provider":"Recursive"}
+{"ts":"2026-11-06T21:29:16.616Z","v":"1.0","prompt":"32a374b7c194","model":"xingchen-agi/xing4.0-29b-a4b:free","outcome":"unusable","status":200,"ms":6043,"answeredChars":608,"invalid":"not_json_object","provider":"Phala"}
