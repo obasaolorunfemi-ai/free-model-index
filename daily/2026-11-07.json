@@ -4,12 +4,12 @@
   "models": [
     {
       "model": "dots-studio/dots-3-note-preview:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
         "usable": 1,
         "usable_late": 0,
-        "unusable": 1,
+        "unusable": 2,
         "timeout": 0,
         "rate_limited_upstream": 0,
         "rate_limited_other": 0,
@@ -19,20 +19,20 @@
         "restricted": 0,
         "probe_budget": 0
       },
-      "usableRate": 50,
-      "latencyP50Ms": 3090,
+      "usableRate": 33.3,
+      "latencyP50Ms": 3136,
       "latencyP95Ms": 3645
     },
     {
       "model": "google/gemma-4-26b-a4b-it:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
         "usable": 0,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
-        "rate_limited_upstream": 2,
+        "rate_limited_upstream": 3,
         "rate_limited_other": 0,
         "withdrawn": 0,
         "unavailable": 0,
@@ -46,14 +46,14 @@
     },
     {
       "model": "google/gemma-4-31b-it:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
         "usable": 0,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
-        "rate_limited_upstream": 2,
+        "rate_limited_upstream": 3,
         "rate_limited_other": 0,
         "withdrawn": 0,
         "unavailable": 0,
@@ -67,10 +67,10 @@
     },
     {
       "model": "liquid/lfm-2.5-2.6b:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
-        "usable": 2,
+        "usable": 3,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
@@ -83,17 +83,17 @@
         "probe_budget": 0
       },
       "usableRate": 100,
-      "latencyP50Ms": 367,
+      "latencyP50Ms": 457,
       "latencyP95Ms": 490
     },
     {
       "model": "liquid/lfm-3-1.7b:free",
-      "probes": 3,
-      "n": 3,
+      "probes": 4,
+      "n": 4,
       "outcomes": {
         "usable": 0,
         "usable_late": 0,
-        "unusable": 3,
+        "unusable": 4,
         "timeout": 0,
         "rate_limited_upstream": 0,
         "rate_limited_other": 0,
@@ -104,15 +104,15 @@
         "probe_budget": 0
       },
       "usableRate": 0,
-      "latencyP50Ms": 893,
+      "latencyP50Ms": 811,
       "latencyP95Ms": 4707
     },
     {
       "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
-        "usable": 2,
+        "usable": 3,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
@@ -125,15 +125,15 @@
         "probe_budget": 0
       },
       "usableRate": 100,
-      "latencyP50Ms": 552,
+      "latencyP50Ms": 555,
       "latencyP95Ms": 3467
     },
     {
       "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
-        "usable": 2,
+        "usable": 3,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
@@ -151,12 +151,12 @@
     },
     {
       "model": "nvidia/nemotron-3.5-lightning:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
         "usable": 0,
         "usable_late": 0,
-        "unusable": 2,
+        "unusable": 3,
         "timeout": 0,
         "rate_limited_upstream": 0,
         "rate_limited_other": 0,
@@ -172,10 +172,10 @@
     },
     {
       "model": "nvidia/nemotron-3.5-super-vl:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
-        "usable": 2,
+        "usable": 3,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
@@ -193,12 +193,12 @@
     },
     {
       "model": "recursive/flint-v1.0:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
         "usable": 0,
         "usable_late": 0,
-        "unusable": 2,
+        "unusable": 3,
         "timeout": 0,
         "rate_limited_upstream": 0,
         "rate_limited_other": 0,
@@ -209,19 +209,19 @@
         "probe_budget": 0
       },
       "usableRate": 0,
-      "latencyP50Ms": 1494,
+      "latencyP50Ms": 1508,
       "latencyP95Ms": 1543
     },
     {
       "model": "xingchen-agi/xing4.0-29b-a4b:free",
-      "probes": 2,
-      "n": 2,
+      "probes": 3,
+      "n": 3,
       "outcomes": {
         "usable": 0,
         "usable_late": 0,
         "unusable": 0,
         "timeout": 0,
-        "rate_limited_upstream": 2,
+        "rate_limited_upstream": 3,
         "rate_limited_other": 0,
         "withdrawn": 0,
         "unavailable": 0,
