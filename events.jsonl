@@ -15,3 +15,4 @@
 {"ts":"2026-11-04T15:32:38.114Z","model":"thinkingmachines/inkling-small:free","event":"removed","kind":"chat"}
 {"ts":"2026-11-04T15:32:38.114Z","model":"thinkingmachines/inkling:free","event":"removed","kind":"chat"}
 {"ts":"2026-11-06T15:59:54.176Z","model":"nvidia/nemotron-3.5-content-safety:free","event":"removed","kind":"excluded"}
+{"ts":"2026-11-07T02:01:24.336Z","model":"liquid/lfm-3-1.7b:free","event":"added","kind":"chat"}
