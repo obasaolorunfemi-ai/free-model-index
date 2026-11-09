@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T11:49:10.222Z",
+  "updated": "2026-11-09T22:30:32.121Z",
   "models": {
     "cohere/north-mini-code:free": {
       "kind": "excluded",
@@ -72,6 +72,12 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-09"
+    },
+    "thinkingmachines/inkling-2-small:free": {
+      "kind": "chat",
+      "status": "active",
+      "firstSeen": "2026-11-09",
       "lastSeen": "2026-11-09"
     },
     "thinkingmachines/inkling-small:free": {
