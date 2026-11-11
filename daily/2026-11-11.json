@@ -3,6 +3,27 @@
   "methodVersion": "1.0",
   "models": [
     {
+      "model": "baidu/ernie-5.5-flash-preview:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 1,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 100,
+      "latencyP50Ms": 2805,
+      "latencyP95Ms": 2805
+    },
+    {
       "model": "dots-studio/dots-3-note-preview:free",
       "probes": 1,
       "n": 1,

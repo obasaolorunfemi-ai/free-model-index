@@ -1,6 +1,12 @@
 {
-  "updated": "2026-11-11T01:18:30.507Z",
+  "updated": "2026-11-11T07:49:15.414Z",
   "models": {
+    "baidu/ernie-5.5-flash-preview:free": {
+      "kind": "chat",
+      "status": "active",
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-11"
+    },
     "cohere/north-mini-code:free": {
       "kind": "excluded",
       "status": "active",
