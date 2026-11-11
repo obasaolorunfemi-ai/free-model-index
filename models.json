@@ -1,53 +1,53 @@
 {
-  "updated": "2026-11-10T20:54:04.184Z",
+  "updated": "2026-11-11T01:18:30.507Z",
   "models": {
     "cohere/north-mini-code:free": {
       "kind": "excluded",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "dots-studio/dots-3-note-preview:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "google/gemma-4-26b-a4b-it:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "google/gemma-4-31b-it:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "liquid/lfm-2.5-2.6b:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "liquid/lfm-3-1.7b:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-07",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "nvidia/nemotron-3-ultra-550b-a55b:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "nvidia/nemotron-3.5-content-safety:free": {
       "kind": "excluded",
@@ -60,25 +60,25 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "nvidia/nemotron-3.5-super-vl:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "recursive/flint-v1.0:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "thinkingmachines/inkling-2-small:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-09",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-11"
     },
     "thinkingmachines/inkling-small:free": {
       "kind": "chat",
@@ -96,9 +96,10 @@
     },
     "xingchen-agi/xing4.0-29b-a4b:free": {
       "kind": "chat",
-      "status": "active",
+      "status": "gone",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-10"
+      "lastSeen": "2026-11-10",
+      "goneAt": "2026-11-11"
     }
   }
 }
