@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T16:19:15.611Z",
+  "updated": "2026-11-11T22:50:20.493Z",
   "models": {
     "baidu/ernie-5.5-flash-preview:free": {
       "kind": "chat",
