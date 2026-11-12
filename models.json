@@ -1,6 +1,12 @@
 {
-  "updated": "2026-11-12T12:55:48.019Z",
+  "updated": "2026-11-12T20:56:16.335Z",
   "models": {
+    "apodex/apodex-1.1-mini:free": {
+      "kind": "chat",
+      "status": "active",
+      "firstSeen": "2026-11-12",
+      "lastSeen": "2026-11-12"
+    },
     "baidu/ernie-5.5-flash-preview:free": {
       "kind": "chat",
       "status": "active",

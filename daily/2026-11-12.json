@@ -3,6 +3,27 @@
   "methodVersion": "1.0",
   "models": [
     {
+      "model": "apodex/apodex-1.1-mini:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 0,
+        "usable_late": 0,
+        "unusable": 1,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 0,
+      "latencyP50Ms": 1220,
+      "latencyP95Ms": 1220
+    },
+    {
       "model": "baidu/ernie-5.5-flash-preview:free",
       "probes": 2,
       "n": 2,

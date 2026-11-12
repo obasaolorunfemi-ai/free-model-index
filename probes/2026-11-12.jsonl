@@ -22,3 +22,4 @@
 {"ts":"2026-11-12T16:47:38.162Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":1213,"answeredChars":49,"provider":"Nvidia"}
 {"ts":"2026-11-12T16:47:42.876Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"unusable","status":200,"ms":2657,"answeredChars":0,"invalid":"empty","provider":"Recursive"}
 {"ts":"2026-11-12T16:47:49.036Z","v":"1.0","prompt":"32a374b7c194","model":"thinkingmachines/inkling-2-small:free","outcome":"restricted","status":403,"ms":25,"message":"thinkingmachines/inkling-2-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"}
+{"ts":"2026-11-12T20:56:16.726Z","v":"1.0","prompt":"32a374b7c194","model":"apodex/apodex-1.1-mini:free","outcome":"unusable","status":200,"ms":1220,"answeredChars":0,"invalid":"empty","provider":"Novita"}
