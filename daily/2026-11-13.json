@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-13",
+  "methodVersion": "1.0",
+  "models": [
+    {
+      "model": "particle-ai/particle-1:free",
+      "probes": 1,
+      "n": 1,
+      "outcomes": {
+        "usable": 1,
+        "usable_late": 0,
+        "unusable": 0,
+        "timeout": 0,
+        "rate_limited_upstream": 0,
+        "rate_limited_other": 0,
+        "withdrawn": 0,
+        "unavailable": 0,
+        "other": 0,
+        "restricted": 0,
+        "probe_budget": 0
+      },
+      "usableRate": 100,
+      "latencyP50Ms": 1366,
+      "latencyP95Ms": 1366
+    }
+  ]
+}
