@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T17:52:14.033Z",
+  "updated": "2026-11-13T23:41:57.643Z",
   "models": {
     "apodex/apodex-1.1-mini:free": {
       "kind": "chat",
@@ -36,6 +36,12 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-13"
+    },
+    "inclusionai/ling-3.2-flash:free": {
+      "kind": "chat",
+      "status": "active",
+      "firstSeen": "2026-11-13",
       "lastSeen": "2026-11-13"
     },
     "liquid/lfm-2.5-2.6b:free": {

@@ -25,3 +25,4 @@
 {"ts":"2026-11-13T16:16:18.138Z","v":"1.0","prompt":"32a374b7c194","model":"particle-ai/particle-1:free","outcome":"usable","status":200,"ms":4981,"answeredChars":46,"provider":"Particle AI"}
 {"ts":"2026-11-13T16:16:26.622Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"unusable","status":200,"ms":1204,"answeredChars":0,"invalid":"empty","provider":"Recursive"}
 {"ts":"2026-11-13T16:16:31.329Z","v":"1.0","prompt":"32a374b7c194","model":"thinkingmachines/inkling-2-small:free","outcome":"restricted","status":403,"ms":23,"message":"thinkingmachines/inkling-2-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"}
+{"ts":"2026-11-13T23:41:57.982Z","v":"1.0","prompt":"32a374b7c194","model":"inclusionai/ling-3.2-flash:free","outcome":"usable","status":200,"ms":2769,"answeredChars":49,"provider":"Ant Digital"}
