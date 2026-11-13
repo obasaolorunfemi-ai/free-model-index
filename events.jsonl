@@ -21,3 +21,4 @@
 {"ts":"2026-11-11T07:49:15.414Z","model":"baidu/ernie-5.5-flash-preview:free","event":"added","kind":"chat"}
 {"ts":"2026-11-12T20:56:16.335Z","model":"apodex/apodex-1.1-mini:free","event":"added","kind":"chat"}
 {"ts":"2026-11-13T01:56:36.127Z","model":"particle-ai/particle-1:free","event":"added","kind":"chat"}
+{"ts":"2026-11-13T09:43:13.908Z","model":"apodex/apodex-1.1-mini:free","event":"removed","kind":"chat"}
