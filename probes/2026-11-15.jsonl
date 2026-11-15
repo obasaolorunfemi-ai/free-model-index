@@ -1,0 +1,13 @@
+{"ts":"2026-11-15T06:18:21.932Z","v":"1.0","prompt":"32a374b7c194","model":"baidu/ernie-5.5-flash-preview:free","outcome":"usable","status":200,"ms":1434,"answeredChars":46,"provider":"Baidu"}
+{"ts":"2026-11-15T06:18:26.868Z","v":"1.0","prompt":"32a374b7c194","model":"dots-studio/dots-3-note-preview:free","outcome":"unusable","status":200,"ms":3902,"answeredChars":0,"invalid":"empty","provider":"AtlasCloud"}
+{"ts":"2026-11-15T06:18:34.272Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-26b-a4b-it:free","outcome":"rate_limited_upstream","status":429,"ms":149}
+{"ts":"2026-11-15T06:18:37.923Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-31b-it:free","outcome":"rate_limited_upstream","status":429,"ms":106}
+{"ts":"2026-11-15T06:18:41.532Z","v":"1.0","prompt":"32a374b7c194","model":"inclusionai/ling-3.2-flash:free","outcome":"usable","status":200,"ms":5825,"answeredChars":49,"provider":"Ant Digital"}
+{"ts":"2026-11-15T06:18:50.860Z","v":"1.0","prompt":"32a374b7c194","model":"liquid/lfm-3-1.7b:free","outcome":"unusable","status":200,"ms":1762,"answeredChars":0,"invalid":"empty","provider":"Liquid"}
+{"ts":"2026-11-15T06:18:56.125Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free","outcome":"usable","status":200,"ms":639,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-15T06:19:00.267Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-ultra-550b-a55b:free","outcome":"usable","status":200,"ms":5941,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-15T06:19:09.711Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-lightning:free","outcome":"unusable","status":200,"ms":1275,"answeredChars":0,"invalid":"empty","provider":"Nvidia"}
+{"ts":"2026-11-15T06:19:14.489Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":968,"answeredChars":49,"provider":"Nvidia"}
+{"ts":"2026-11-15T06:19:18.961Z","v":"1.0","prompt":"32a374b7c194","model":"particle-ai/particle-1:free","outcome":"usable","status":200,"ms":807,"answeredChars":46,"provider":"Particle AI"}
+{"ts":"2026-11-15T06:19:23.269Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"unusable","status":200,"ms":1398,"answeredChars":0,"invalid":"empty","provider":"Recursive"}
+{"ts":"2026-11-15T06:19:28.168Z","v":"1.0","prompt":"32a374b7c194","model":"thinkingmachines/inkling-2-small:free","outcome":"restricted","status":403,"ms":27,"message":"thinkingmachines/inkling-2-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"}
