@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T03:40:10.922Z",
+  "updated": "2026-11-19T13:29:33.974Z",
   "models": {
     "apodex/apodex-1.1-mini:free": {
       "kind": "chat",
@@ -102,9 +102,10 @@
     },
     "thinkingmachines/inkling-2-small:free": {
       "kind": "chat",
-      "status": "active",
+      "status": "gone",
       "firstSeen": "2026-11-09",
-      "lastSeen": "2026-11-19"
+      "lastSeen": "2026-11-19",
+      "goneAt": "2026-11-19"
     },
     "thinkingmachines/inkling-small:free": {
       "kind": "chat",
