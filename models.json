@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T02:29:54.042Z",
+  "updated": "2026-11-21T11:24:50.648Z",
   "models": {
     "apodex/apodex-1.1-mini:free": {
       "kind": "chat",
@@ -23,9 +23,10 @@
     },
     "dots-studio/dots-3-note-preview:free": {
       "kind": "chat",
-      "status": "active",
+      "status": "gone",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-21"
+      "lastSeen": "2026-11-21",
+      "goneAt": "2026-11-21"
     },
     "google/gemma-4-26b-a4b-it:free": {
       "kind": "chat",
