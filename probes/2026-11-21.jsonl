@@ -1,0 +1,11 @@
+{"ts":"2026-11-21T06:58:07.534Z","v":"1.0","prompt":"32a374b7c194","model":"baidu/ernie-5.5-flash-preview:free","outcome":"usable","status":200,"ms":1493,"answeredChars":46,"provider":"Baidu"}
+{"ts":"2026-11-21T06:58:12.529Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-26b-a4b-it:free","outcome":"rate_limited_upstream","status":429,"ms":83}
+{"ts":"2026-11-21T06:58:16.113Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-31b-it:free","outcome":"rate_limited_upstream","status":429,"ms":190}
+{"ts":"2026-11-21T06:58:19.806Z","v":"1.0","prompt":"32a374b7c194","model":"inclusionai/ling-3.2-flash:free","outcome":"rate_limited_upstream","status":429,"ms":1050}
+{"ts":"2026-11-21T06:58:24.358Z","v":"1.0","prompt":"32a374b7c194","model":"liquid/lfm-3-1.7b:free","outcome":"rate_limited_upstream","status":429,"ms":198}
+{"ts":"2026-11-21T06:58:28.058Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free","outcome":"usable","status":200,"ms":781,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-21T06:58:32.342Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-ultra-550b-a55b:free","outcome":"usable","status":200,"ms":2056,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-21T06:58:37.900Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-lightning:free","outcome":"unusable","status":200,"ms":1136,"answeredChars":0,"invalid":"empty","provider":"Nvidia"}
+{"ts":"2026-11-21T06:58:42.538Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":1116,"answeredChars":49,"provider":"Nvidia"}
+{"ts":"2026-11-21T06:58:47.156Z","v":"1.0","prompt":"32a374b7c194","model":"particle-ai/particle-1:free","outcome":"rate_limited_upstream","status":429,"ms":335}
+{"ts":"2026-11-21T06:58:50.993Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"usable","status":200,"ms":2895,"answeredChars":46,"provider":"Recursive"}
