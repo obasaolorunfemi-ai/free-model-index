@@ -27,3 +27,4 @@
 {"ts":"2026-11-19T13:29:33.974Z","model":"thinkingmachines/inkling-2-small:free","event":"removed","kind":"chat"}
 {"ts":"2026-11-20T03:31:24.583Z","model":"cohere/north-mini-code:free","event":"removed","kind":"excluded"}
 {"ts":"2026-11-21T11:24:50.648Z","model":"dots-studio/dots-3-note-preview:free","event":"removed","kind":"chat"}
+{"ts":"2026-11-23T03:47:29.592Z","model":"dots-studio/dots-3-note-preview:free","event":"returned","kind":"chat"}

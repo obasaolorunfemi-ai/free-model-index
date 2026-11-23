@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T22:33:34.949Z",
+  "updated": "2026-11-23T03:47:29.592Z",
   "models": {
     "apodex/apodex-1.1-mini:free": {
       "kind": "chat",
@@ -12,7 +12,7 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-11",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "cohere/north-mini-code:free": {
       "kind": "excluded",
@@ -23,28 +23,27 @@
     },
     "dots-studio/dots-3-note-preview:free": {
       "kind": "chat",
-      "status": "gone",
+      "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-21",
-      "goneAt": "2026-11-21"
+      "lastSeen": "2026-11-23"
     },
     "google/gemma-4-26b-a4b-it:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "google/gemma-4-31b-it:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "inclusionai/ling-3.2-flash:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-13",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "liquid/lfm-2.5-2.6b:free": {
       "kind": "chat",
@@ -57,19 +56,19 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-07",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "nvidia/nemotron-3-ultra-550b-a55b:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "nvidia/nemotron-3.5-content-safety:free": {
       "kind": "excluded",
@@ -82,25 +81,25 @@
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "nvidia/nemotron-3.5-super-vl:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "particle-ai/particle-1:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-13",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "recursive/flint-v1.0:free": {
       "kind": "chat",
       "status": "active",
       "firstSeen": "2026-11-03",
-      "lastSeen": "2026-11-22"
+      "lastSeen": "2026-11-23"
     },
     "thinkingmachines/inkling-2-small:free": {
       "kind": "chat",
