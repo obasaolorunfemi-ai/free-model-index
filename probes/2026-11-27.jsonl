@@ -1,0 +1,11 @@
+{"ts":"2026-11-27T08:16:09.902Z","v":"1.0","prompt":"32a374b7c194","model":"baidu/ernie-5.5-flash-preview:free","outcome":"usable","status":200,"ms":1281,"answeredChars":46,"provider":"Baidu"}
+{"ts":"2026-11-27T08:16:14.684Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-26b-a4b-it:free","outcome":"rate_limited_upstream","status":429,"ms":77}
+{"ts":"2026-11-27T08:16:18.263Z","v":"1.0","prompt":"32a374b7c194","model":"google/gemma-4-31b-it:free","outcome":"rate_limited_upstream","status":429,"ms":82}
+{"ts":"2026-11-27T08:16:21.849Z","v":"1.0","prompt":"32a374b7c194","model":"inclusionai/ling-3.2-flash:free","outcome":"usable","status":200,"ms":1133,"answeredChars":49,"provider":"Ant Digital"}
+{"ts":"2026-11-27T08:16:26.484Z","v":"1.0","prompt":"32a374b7c194","model":"liquid/lfm-3-1.7b:free","outcome":"unusable","status":200,"ms":1223,"answeredChars":0,"invalid":"empty","provider":"Liquid"}
+{"ts":"2026-11-27T08:16:31.209Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free","outcome":"usable","status":200,"ms":569,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-27T08:16:35.280Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3-ultra-550b-a55b:free","outcome":"usable","status":200,"ms":11715,"answeredChars":55,"provider":"Nvidia"}
+{"ts":"2026-11-27T08:16:50.498Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-lightning:free","outcome":"unusable","status":200,"ms":1423,"answeredChars":0,"invalid":"empty","provider":"Nvidia"}
+{"ts":"2026-11-27T08:16:55.422Z","v":"1.0","prompt":"32a374b7c194","model":"nvidia/nemotron-3.5-super-vl:free","outcome":"usable","status":200,"ms":1379,"answeredChars":49,"provider":"Nvidia"}
+{"ts":"2026-11-27T08:17:00.305Z","v":"1.0","prompt":"32a374b7c194","model":"particle-ai/particle-1:free","outcome":"usable","status":200,"ms":798,"answeredChars":46,"provider":"Particle AI"}
+{"ts":"2026-11-27T08:17:04.604Z","v":"1.0","prompt":"32a374b7c194","model":"recursive/flint-v1.0:free","outcome":"usable","status":200,"ms":4589,"answeredChars":46,"provider":"Recursive"}
